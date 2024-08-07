@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.assignment3.Controller">
+    <!-- We add a label to display the title of the application -->
+    <Label text="Currency Converter"/>
+
+    <!-- We add a horizontal box to contain the label and text field for input amount -->
+    <HBox spacing="10">
+        <Label text="Amount:"/>
+        <TextField fx:id="amountField"/>
+    </HBox>
+
+    <!-- We add a horizontal box to contain the radio buttons for selecting the conversion direction -->
+    <HBox spacing="10">
+        <RadioButton fx:id="nprToCadRadio" text="NPR to CAD"/>
+        <RadioButton fx:id="cadToNprRadio" text="CAD to NPR"/>
+    </HBox>
+
+    <!-- We add a button to trigger the conversion when clicked -->
+    <Button text="Convert" onAction="#handleConvert"/>
+
+    <!-- We add a label to display the result of the conversion -->
+    <Label fx:id="resultLabel"/>
+</VBox>
